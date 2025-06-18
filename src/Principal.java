@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -29,5 +30,16 @@ public class Principal {
         serie.setEpisodiosPorTemporada(10);
         serie.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar Lost: "+ serie.getDuracaoEmMinutos());
+
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("Avatar");
+        outroFilme.setAnoDeLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(200);
+
+        CalculadoraDeTempo calculadoraDeTempo = new CalculadoraDeTempo();
+        calculadoraDeTempo.inclui(meuFilme);
+        calculadoraDeTempo.inclui(outroFilme);
+        calculadoraDeTempo.inclui(serie);
+        System.out.println(calculadoraDeTempo.getTempoTotal());
     }
 }

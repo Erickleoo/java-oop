@@ -1,23 +1,23 @@
 package br.com.alura.screenmatch.modelos;
 
 public class ContaBancaria {
-    private int numeroConta;
     private double saldo;
-    public String titular;
 
-    public int getNumeroConta() {
-        return numeroConta;
+    public void depositar(double valor) {
+        this.saldo += valor;
+        System.out.println("Deposito no valor de: " + valor + " realizado. Saldo atual é: " + this.saldo);
     }
 
-    public void setNumeroConta(int numeroConta) {
-        this.numeroConta = numeroConta;
+    public void sacar(double valor) {
+        this.saldo -= valor;
+        System.out.println("Você sacou um valor : " + valor + " saldo atual: " + this.saldo);
+    }
+
+    public void consultarSaldo() {
+        System.out.println("Saldo atual é: " + this.saldo);
     }
 
     public double getSaldo() {
         return saldo;
-    }
-
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
     }
 }
