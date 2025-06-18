@@ -1,4 +1,6 @@
 import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculo.FiltroRecomendacao;
+import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -10,7 +12,6 @@ public class Principal {
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do filme: "+ meuFilme.getDuracaoEmMinutos());
 
-        /*
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(8);
         meuFilme.avalia(5);
@@ -18,11 +19,9 @@ public class Principal {
         
         System.out.println("Total de  avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
-         */
 
 
         Serie serie = new Serie();
-
         serie.setNome("Lost");
         serie.setAnoDeLancamento(200);
         serie.exibeFichaTecnica();
@@ -41,5 +40,14 @@ public class Principal {
         calculadoraDeTempo.inclui(outroFilme);
         calculadoraDeTempo.inclui(serie);
         System.out.println(calculadoraDeTempo.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(serie);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
     }
 }
