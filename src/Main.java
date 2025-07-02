@@ -1,7 +1,6 @@
-import br.com.alura.screenmatch.modelos.Aluno;
-import br.com.alura.screenmatch.modelos.IdadePessoa;
-import br.com.alura.screenmatch.modelos.Livro;
-import br.com.alura.screenmatch.modelos.Produto;
+import br.com.alura.screenmatch.modelos.*;
+
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,17 +44,34 @@ public class Main {
         System.out.println("Média: " + aluno2.calcularMedia());
         */
 
-        Livro livro1 = new Livro();
-        livro1.setTitulo("Lógica de Programação");
-        livro1.setAutor("Paulo Silveira");
+//        Livro livro1 = new Livro();
+//        livro1.setTitulo("Lógica de Programação");
+//        livro1.setAutor("Paulo Silveira");
+//
+//        Livro livro2 = new Livro();
+//        livro2.setTitulo("A lógica do jogo");
+//        livro2.setAutor("Marcus Becker");
+//
+//        livro1.exibirDetalhes();
+//        livro2.exibirDetalhes();
 
-        Livro livro2 = new Livro();
-        livro2.setTitulo("A lógica do jogo");
-        livro2.setAutor("Marcus Becker");
 
-        livro1.exibirDetalhes();
-        livro2.exibirDetalhes();
 
+        ArrayList<Pessoa> listaDePessoas = new ArrayList<>();
+        Pessoa pessoa1 = new Pessoa("Erick", 29);
+        Pessoa pessoa2 = new Pessoa("Bandeco", 18);
+        Pessoa pessoa3 = new Pessoa("Adauel", 50);
+
+        listaDePessoas.add(pessoa1);
+        listaDePessoas.add(pessoa2);
+        listaDePessoas.add(pessoa3);
+
+        System.out.println("Tamanho da lista: " + listaDePessoas.size());
+        System.out.println("Primeira pessoa da lista: " + listaDePessoas.get(0));
+        System.out.println("Lista de pessoas:");
+        for (Pessoa pessoa : listaDePessoas) {
+            System.out.println(pessoa);
+        }
 
 
     }
