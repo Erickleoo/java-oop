@@ -56,23 +56,40 @@ public class Main {
 //        livro2.exibirDetalhes();
 
 
+//
+//        ArrayList<Pessoa> listaDePessoas = new ArrayList<>();
+//        Pessoa pessoa1 = new Pessoa("Erick", 29);
+//        Pessoa pessoa2 = new Pessoa("Bandeco", 18);
+//        Pessoa pessoa3 = new Pessoa("Adauel", 50);
+//
+//        listaDePessoas.add(pessoa1);
+//        listaDePessoas.add(pessoa2);
+//        listaDePessoas.add(pessoa3);
+//
+//        System.out.println("Tamanho da lista: " + listaDePessoas.size());
+//        System.out.println("Primeira pessoa da lista: " + listaDePessoas.get(0));
+//        System.out.println("Lista de pessoas:");
+//        for (Pessoa pessoa : listaDePessoas) {
+//            System.out.println(pessoa);
+//        }
 
-        ArrayList<Pessoa> listaDePessoas = new ArrayList<>();
-        Pessoa pessoa1 = new Pessoa("Erick", 29);
-        Pessoa pessoa2 = new Pessoa("Bandeco", 18);
-        Pessoa pessoa3 = new Pessoa("Adauel", 50);
 
-        listaDePessoas.add(pessoa1);
-        listaDePessoas.add(pessoa2);
-        listaDePessoas.add(pessoa3);
+        ArrayList<Produto> listaDeProdutos = new ArrayList<>();
 
-        System.out.println("Tamanho da lista: " + listaDePessoas.size());
-        System.out.println("Primeira pessoa da lista: " + listaDePessoas.get(0));
-        System.out.println("Lista de pessoas:");
-        for (Pessoa pessoa : listaDePessoas) {
-            System.out.println(pessoa);
+        Produto produto1 = new Produto("Sabão", 15.99, 5);
+        Produto produto2 = new Produto("Detergente", 10.49, 8);
+
+        listaDeProdutos.add(produto1);
+        listaDeProdutos.add(produto2);
+
+        System.out.println("Tamanho da lista de produtos: " + listaDeProdutos.size());
+        System.out.println("Lista de Produtos: ");
+        for (Produto produto : listaDeProdutos) {
+            System.out.println(produto);
         }
 
+        ProdutoPerecivel produtoPerecivel = new ProdutoPerecivel("Arroz", 12.99, 10, "2025-12-31");
+        System.out.println(produtoPerecivel);
 
     }
 }
